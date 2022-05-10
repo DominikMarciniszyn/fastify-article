@@ -1,0 +1,33 @@
+{
+  "name": "fastify-article",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node --inspect=5858 -r ts-node/register ./src/index.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DominikMarciniszyn/fastify-article.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DominikMarciniszyn/fastify-article/issues"
+  },
+  "homepage": "https://github.com/DominikMarciniszyn/fastify-article#readme",
+  "dependencies": {
+    "fastify": "^3.29.0",
+    "pino": "^7.11.0",
+    "ts-node": "^10.7.0"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.31",
+    "eslint": "^8.15.0",
+    "nodemon": "^2.0.16",
+    "prettier": "^2.6.2",
+    "typescript": "^4.6.4"
+  }
+}
