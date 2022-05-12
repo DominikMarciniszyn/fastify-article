@@ -1,11 +1,8 @@
 import fastify, { FastifyInstance } from 'fastify';
 import { Server, IncomingMessage, ServerResponse } from 'http';
-import pino from 'pino';
-
-const pinoLogger = pino({ level: 'info' });
 
 const server: FastifyInstance<Server, IncomingMessage, ServerResponse> = fastify({
-  logger: pinoLogger
+  logger: true
 });
 
 const run = async () => {
