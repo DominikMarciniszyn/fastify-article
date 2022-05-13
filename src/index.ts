@@ -1,9 +1,12 @@
 import fastify, { FastifyInstance } from 'fastify';
 import { Server, IncomingMessage, ServerResponse } from 'http';
+import { orders } from './routes/orders/orders.controller';
 
 const server: FastifyInstance<Server, IncomingMessage, ServerResponse> = fastify({
   logger: true
 });
+
+server.register(orders);
 
 const run = async () => {
   try {
