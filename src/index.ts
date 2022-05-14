@@ -8,7 +8,7 @@ const server: FastifyInstance<Server, IncomingMessage, ServerResponse> = fastify
 
 server.register(orders);
 
-const run = async () => {
+const run = async (): Promise<void> => {
   try {
     await server.listen(3000, '0.0.0.0');
   } catch (error) {

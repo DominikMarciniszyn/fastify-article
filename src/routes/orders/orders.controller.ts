@@ -1,12 +1,7 @@
-import { getOrdersHandler } from "./orders.handler";
-import { getOrdersSchema } from "./orders.schema";
+import { getOrdersOptions } from "./orders.option";
+import { FastifyInstance, RouteHandler, RouteOptions } from 'fastify';
 
-export const getOrdersOptions = {
-  schema: getOrdersSchema,
-  handler: getOrdersHandler,
-};
-
-export const orders = (fastify, options, done) => {
+export const orders = (fastify: FastifyInstance, options: RouteOptions, done): void => {
   fastify.get('/api/v1/orders', getOrdersOptions);
 
   done();

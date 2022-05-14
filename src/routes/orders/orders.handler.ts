@@ -1,4 +1,4 @@
-export const getOrdersHandler = (req, reply) => {
+export const getOrdersHandler = (req, reply): void => {
   reply.send([
     { id: 1, title: 'Order #1', body: 'This is order #1' },
     { id: 2, title: 'Order #2', body: 'This is order #2' },
