@@ -1,5 +1,5 @@
-import { getOrderHandler, getOrdersHandler,  } from "./orders.handler";
-import { getOrdersSchema, getOrderSchema } from "./orders.schema";
+import { createOrderHandler, getOrderHandler, getOrdersHandler,  } from "./orders.handler";
+import { getOrdersSchema, getOrderSchema, createOrderSchema } from "./orders.schema";
 
 export const getOrdersOptions = {
   getOrdersSchema,
@@ -7,10 +7,11 @@ export const getOrdersOptions = {
 };
 
 export const getOrderOption = {
-
-};
-
-export const postOrderOptions = {
   getOrderSchema,
   handler: getOrderHandler
+};
+
+export const createOrderOption = {
+  createOrderSchema,
+  handler: createOrderHandler
 };

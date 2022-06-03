@@ -1,4 +1,4 @@
-import { Orders, Order, ParamsId } from "./order.types";
+import { Orders, Order, ParamsId, CreateOrder, SimpleResponse, CreateOrderRequiredBody } from "./order.types";
 
 export const getOrdersSchema = {
   schema: {
@@ -19,3 +19,17 @@ export const getOrderSchema = {
     },
   },
 };
+
+export const createOrderSchema = {
+  schema: {
+    body: {
+      type: 'object',
+      required: CreateOrderRequiredBody,
+      properties: CreateOrder
+    },
+    params: ParamsId,
+    response: {
+      200: SimpleResponse
+    }
+  }
+}

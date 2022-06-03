@@ -28,3 +28,12 @@ export const getOrderHandler = (req, reply): void => {
 
   return reply.send(order as OrderType);
 }
+
+export const createOrderHandler = (req, reply) => {
+  const { title, body } = req.body;
+
+  const id = orders.length + 1;
+  orders.push({ id, title, body });
+
+  reply.send('Order was created...');
+}
